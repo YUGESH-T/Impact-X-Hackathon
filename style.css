@@ -9,11 +9,10 @@
     background-color: #f5fdf6;
     color: #222;
   }
-  
-  a{
-    text-decoration: none;
-  }
 
+  i{
+    color: white;
+  }
   .container {
     display: flex;
     min-height: 100vh;
@@ -168,8 +167,9 @@
     align-items: flex-start;
     gap: 1.5rem;
     padding-left: 1rem;
+   
   }
-  
+ 
   .sidebar .label {
     display: none;
     margin-left: 10px;

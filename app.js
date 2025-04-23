@@ -56,6 +56,7 @@ const data = {
         <td>${entry.co2}</td>
         <td>${entry.streak}</td>
       `;
+      
   
       tbody.appendChild(tr);
     });
@@ -66,4 +67,3 @@ const data = {
     switchView("weekly");
   });
 
-  
