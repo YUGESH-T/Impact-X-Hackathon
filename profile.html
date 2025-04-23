@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="profile.css">
+    <script src="https://kit.fontawesome.com/62301ddb39.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="profile-settings">
+      <aside class="sidebar" id="sidebar">
+        <button id="toggleBtn"><i class="fa-brands fa-pagelines"></i></button>
+        <nav>
+          <ul>
+            <li><span><a href="index.html"><i class="fa-solid fa-house"></i></span><span class="label"> Home</span></a></li>
+            <li><span><a href="log.html"><i class="fa-solid fa-chart-pie"></i></span><span class="label"> Stats</span></a></li>
+            <li><span><a href="leaderboard.html"><i class="fa-solid fa-chart-column"></i></span><span class="label"> Leaderboard</span></a></li>
+            <li><span><a href="profile.html"><i class="fa-solid fa-gear"></i></span><span class="label"> Settings></span></a></li>
+            <li><span><a href="profile.html"><i class="fa-solid fa-user"></i></span><span class="label"> Profile</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+        <h2>Profile & Settings</h2>
+        <p>Manage your account and preferences</p>
+      
+        <div class="settings-container">
+          <div class="profile-card">
+            <div class="avatar">JD</div>
+            <h3>Yugesh T</h3>
+            <p>Member since April 2025</p>
+            <div class="profile-stats">
+              <p><strong>285</strong> Total Eco-Points</p>
+              <p><strong>7 days</strong> Current Streak</p>
+              <p><strong>47.3 kg</strong> CO₂ Saved</p>
+            </div>
+            <button class="edit-profile-btn">Edit Profile</button>
+          </div>
+      
+          <div class="settings-panel">
+            <div class="card">
+              <h4>Account Settings</h4>
+              <p>Update your account information</p>
+              <input type="text" placeholder="Username" value="Yugesh" />
+              <input type="email" placeholder="Email" value="yugeshtg@example.com" />
+              <input type="text" placeholder="Location" value="Madanapalle" />
+            </div>
+    
+            <div class="card">
+              <h4>Preferences</h4>
+              <p>Customize your experience</p>
+      
+              <div class="preference-item">
+                <label>Dark Mode</label>
+                <input type="checkbox" />
+              </div>
+              <div class="preference-item">
+                <label>Notifications</label>
+                <input type="checkbox" checked />
+              </div>
+              <div class="preference-item">
+                <label>Daily Reminder</label>
+                <input type="checkbox" checked />
+              </div>
+      
+              <button class="save-btn">Save Changes</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="app.js"></script>
+</body>
+</html

@@ -1,0 +1,364 @@
+/* .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 100vh;
+  background-color: #27AE60; 
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  transition: width 0.3s ease;
+  z-index: 1000;
+}
+i{
+  color: black;
+  text-decoration: none;
+}
+.sidebar.expanded {
+  width: 200px;
+}
+
+#toggleBtn {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.2rem 0;
+}
+
+.sidebar nav ul li i {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.sidebar nav ul li .label {
+  font-size: 0.75rem;
+  color: rgb(255, 255, 255);
+  display: none;
+}
+
+.sidebar nav ul li:hover .label {
+  display: block;
+  text-align: center;
+  margin-top: 0.3rem;
+  font-weight: bold;
+}
+.profile-settings {
+    padding: 2rem;
+    background-color: #f5fdf6;
+  }
+  
+  .settings-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .profile-card {
+    flex: 1;
+    max-width: 300px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  
+  .profile-card .avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #dff5e4;
+    color: #1ca65c;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    line-height: 80px;
+    margin: 0 auto 1rem;
+  }
+  
+  .profile-card .profile-stats {
+    margin-top: 1rem;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .edit-profile-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #eafae6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .settings-panel {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .card input[type="text"],
+  .card input[type="email"] {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid #d9f0dc;
+    border-radius: 8px;
+    background-color: #f4fdf7;
+  }
+  
+  .preference-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.8rem 0;
+  }
+  
+  .save-btn {
+    margin-top: 1rem;
+    background-color: #1ca65c;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    float: right;
+  }
+   */
+   /* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f5fdf6;
+  color: #222;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 100vh;
+  background-color: #27ae60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  transition: width 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.expanded {
+  width: 200px;
+}
+
+.sidebar button#toggleBtn {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+}
+
+.sidebar nav ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  gap: 10px;
+  width: 100%;
+}
+
+.sidebar .label {
+  display: none;
+  font-size: 0.9rem;
+}
+
+.sidebar.expanded .label {
+  display: inline;
+}
+
+/* Main Section */
+.profile-settings {
+  margin-left: 72px;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.sidebar.expanded + .profile-settings {
+  margin-left: 200px;
+}
+
+.profile-settings h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-settings p {
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+/* Layout */
+.settings-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Profile Card */
+.profile-card {
+  flex: 1;
+  max-width: 300px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: #1ca65c;
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.profile-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.profile-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.profile-stats {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.edit-profile-btn {
+  background-color: #1ca65c;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Settings Panel */
+.settings-panel {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.settings-panel .card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.settings-panel h4 {
+  margin-bottom: 0.5rem;
+}
+
+.settings-panel input[type="text"],
+.settings-panel input[type="email"] {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.preference-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+
+.save-btn {
+  margin-top: 1rem;
+  background-color: #1ca65c;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .settings-container {
+    flex-direction: column;
+  }
+
+  .profile-settings {
+    padding: 1rem;
+  }
+
+  .profile-card {
+    max-width: 100%;
+  }
+}

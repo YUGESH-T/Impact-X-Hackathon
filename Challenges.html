@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Challenges.css">
+    <script src="https://kit.fontawesome.com/62301ddb39.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="challenges">
+  <section class="challenges">
+      <aside class="sidebar" id="sidebar">
+        <button id="toggleBtn"><i class="fa-brands fa-pagelines"></i></button>
+        <nav>
+          <ul>
+            <li><span><a href="index.html"><i class="fa-solid fa-house"></i></span><span class="label">Home</span></a></li>
+            <li><span><a href="log.html"><i class="fa-solid fa-chart-pie"></i></span><span class="label">Stats</span></a></li>
+            <li><span><a href="leaderboard.html"><i class="fa-solid fa-chart-column"></i></span><span class="label">Leaderboard</span></a></li>
+            <li><span><a href="profile.html"><i class="fa-solid fa-gear"></i></span><span class="label">Settings></span></a></li>
+            <li><span><a href="profile.html"><i class="fa-solid fa-user"></i></span><span class="label">Profile</span></a></li>
+          </ul>
+        </nav>
+      </aside>
         <h2>Challenges</h2>
         <p>Complete eco-missions to earn bonus points</p>
         <div class="challenge-grid">
@@ -60,6 +73,6 @@
           </div>
         </div>
       </section>
-      
+      <script src="app.js"></script>
 </body>
 </html>
