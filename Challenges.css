@@ -79,7 +79,7 @@ body {
   background: #f2fdf4;
   min-height: 100vh;
 }
-display: inline;
+
 
 .sidebar.expanded + .challenges {
   margin-left: 200px;

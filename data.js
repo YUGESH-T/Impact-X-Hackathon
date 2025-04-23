@@ -1,13 +1,3 @@
-const sidebar = document.getElementById('sidebar');
-const toggleBtn = document.getElementById('toggleBtn');
-// const logs = document.querySelector('.container-01');
-
-
-toggleBtn.addEventListener('click', () => {
-  sidebar.classList.toggle('expanded');
-});
-
-
 const weeklyData = [
     { rank: 1, user: "GreenGuru", ecoPoints: 1250, co2Saved: 45.2, streak: 7 },
     { rank: 2, user: "EcoWarrior", ecoPoints: 1100, co2Saved: 38.7, streak: 5 },
@@ -30,8 +20,7 @@ function populateLeaderboard(data) {
         console.error("Error: Element with ID 'leaderboard-body' not found.");
         return;
     }
-    tbody.innerHTML = ''; // Clear existing rows
-
+    tbody.innerHTML = '';
     data.forEach(entry => {
         const row = document.createElement('tr');
         row.innerHTML = `
@@ -45,37 +34,37 @@ function populateLeaderboard(data) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initializeLeaderboard() {
+    if (!document) {
+        console.error("Error: Document object is not available.");
+        return;
+    }
     const tbody = document.getElementById('leaderboard-body');
     const tabs = document.querySelectorAll('.tab');
 
     if (!tbody) {
-        console.error("Error: Leaderboard body element not found.");
+        console.error("Error: Leaderboard body element (#leaderboard-body) not found.");
         return;
     }
-
     if (tabs.length === 0) {
-        console.error("Error: No tab elements found with class 'tab'.");
+        console.error("Error: No tab elements (.tab) found.");
         return;
     }
 
-    // Initial population with weekly data
     populateLeaderboard(weeklyData);
 
-    // Tab switching logic
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
-            // Remove active class from all tabs
             tabs.forEach(t => t.classList.remove('active'));
-            // Add active class to clicked tab
             tab.classList.add('active');
-
-            // Update leaderboard based on tab
-            if (tab.textContent === 'Weekly') {
-                populateLeaderboard(weeklyData);
-            } else {
-                populateLeaderboard(monthlyData);
-            }
+            populateLeaderboard(tab.textContent === 'Weekly' ? weeklyData : monthlyData);
         });
     });
-});
+}
+
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeLeaderboard);
+} else {
+    initializeLeaderboard();
+}
