@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Log Activity</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <!-- <link rel="stylesheet" href="styles.css"/> -->
+  <script src="https://kit.fontawesome.com/62301ddb39.js" crossorigin="anonymous"></script>
   <style>
     body {
         margin: 0;
@@ -12,7 +13,66 @@
         background-color: #f1f9f3;
         color: #222;
       }
-      
+      .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 100vh;
+  background-color: #27ae60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  transition: width 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.expanded {
+  width: 200px;
+}
+
+.sidebar button#toggleBtn {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.8rem 1rem;
+}
+
+.sidebar nav ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  gap: 10px;
+  width: 100%;
+}
+
+.sidebar .label {
+  display: none;
+  font-size: 0.9rem;
+}
+
+.sidebar.expanded .label {
+  display: inline;
+}
+
       .container {
         max-width: 600px;
         margin: 3rem auto;
@@ -108,6 +168,9 @@
       }
       
       .impact-summary {
+        display: flex;
+        flex-direction: column;
+        line-height: 0;
         background: #e6f4e6;
         padding: 1rem;
         border-radius: 10px;
@@ -122,6 +185,17 @@
         color: #2e7d32;
       }
       
+      #lodge{
+        padding: 0.5rem 1rem;
+        border: none;
+        background: #1b4332e3;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+        color: white;align-self: center;
+      }
+      
   </style>
 </head>
 
@@ -132,6 +206,18 @@
 
           
   <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <button id="toggleBtn"><i class="fa-brands fa-pagelines"></i></button>
+      <nav>
+        <ul>
+          <li><span><a href="index.html"><i class="fa-solid fa-house"></i></span><span class="label"> Home</span></a></li>
+          <li><span><a href="log.html"><i class="fa-solid fa-chart-pie"></i></span><span class="label"> Stats</span></a></li>
+          <li><span><a href="leaderboard.html"><i class="fa-solid fa-chart-column"></i></span><span class="label"> Leaderboard</span></a></li>
+          <li><span><a href="profile.html"><i class="fa-solid fa-gear"></i></span><span class="label"> Settings></span></a></li>
+          <li><span><a href="profile.html"><i class="fa-solid fa-user"></i></span><span class="label"> Profile</span></a></li>
+        </ul>
+      </nav>
+    </aside>
     <h1>Log Activity</h1>
     <p class="subtitle">Track your daily environmental impact</p>
 
@@ -147,8 +233,8 @@
 
       <h3>Mode of Transport</h3>
       <div class="transport-options">
-        <button class="option active">🚴‍♂️ Bicycle<br/><span>0 emissions</span></button>
-        <button class="option">🚶‍♂️ Walking<br/><span>0 emissions</span></button>
+        <button class="option active">🚴‍♂ Bicycle<br/><span>0 emissions</span></button>
+        <button class="option">🚶‍♂ Walking<br/><span>0 emissions</span></button>
         <button class="option">🚌 Public Transit<br/><span>Low emissions</span></button>
         <button class="option">🚗 Car<br/><span>High emissions</span></button>
       </div>
@@ -161,8 +247,10 @@
         <h4>Impact Summary</h4>
         <p>CO<sub>2</sub> Saved: <strong>1.6 kg</strong></p>
         <p>Eco Points: <strong>8 pts</strong></p>
+        <button id="lodge">Submit</button>
       </div>
     </div>
   </div>
+  <script src="app.js"></script>
 </body>
 </html>
