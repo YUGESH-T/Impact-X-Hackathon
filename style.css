@@ -1,55 +1,128 @@
-:root {
-    --green: #4caf50;
-    --dark: #121212;
-    --light: #f4f4f4;
-    --blue: #2196f3;
-  }
-  body {
-    font-family: 'Segoe UI', sans-serif;
+* {
     margin: 0;
-    background: var(--light);
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
   }
-  header {
-    background: var(--green);
-    color: white;
-    padding: 1rem;
-    text-align: center;
+  
+  body {
+    background-color: #f5fdf6;
+    color: #222;
   }
-  nav {
+  
+  .container {
     display: flex;
-    justify-content: space-around;
-    background: #e0e0e0;
-    padding: 0.5rem;
-    position: sticky;
-    top: 5px;
+    min-height: 100vh;
   }
-  nav a {
-    text-decoration: none;
-    color: #333;
+  
+  .sidebar {
+    width: 60px;
+    background-color: #1ca65c;
+    padding: 1rem 0;
   }
-  section {
-    padding: 1rem;
+  
+  .sidebar nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
   }
+  
+  .dashboard {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .subheading {
+    margin-bottom: 1.5rem;
+    color: #666;
+  }
+  
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  
   .card {
     background: white;
     padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
-  .progress-bar {
+  
+  .card .value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+  
+  .card .note {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .quick-stats {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .quick-add,
+  .streak-card {
+    flex: 1;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .quick-add .buttons {
+    margin-top: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .quick-add button {
+    background-color: #effaf1;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .streak-card .progress-bar {
     height: 10px;
-    background: #ccc;
+    background: #d0e6d6;
     border-radius: 5px;
-    overflow: hidden;
+    margin: 1rem 0;
   }
-  .progress-bar span {
-    display: block;
+  
+  .streak-card .progress {
     height: 100%;
-    background: var(--blue);
-    width: 60%;
+    background: #1ca65c;
+    border-radius: 5px;
   }
-  .toggle-dark {
-    float: right;
+  
+  .eco-tip {
+    background: white;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
+  
+  .eco-tip blockquote {
+    font-style: italic;
+    color: #333;
+    margin-top: 0.5rem;
+  }
+  
