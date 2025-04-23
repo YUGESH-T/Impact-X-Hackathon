@@ -5,20 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Eco Action Dashboard</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/62301ddb39.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
-    <aside class="sidebar">
-      <nav>
-        <ul>
-          <li><span>🏠</span></li>
-          <li><span>📊</span></li>
-          <li><span>🔄</span></li>
-          <li><span>⚙️</span></li>
-          <li><span>👤</span></li>
-        </ul>
-      </nav>
-    </aside>
+    <aside class="sidebar" id="sidebar">
+        <button id="toggleBtn"><i class="fa-brands fa-pagelines"></i></button>
+        <nav>
+          <ul>
+            <li><span>🏠</span><span class="label">Home</span></li>
+            <li><span>📊</span><span class="label">Stats</span></li>
+            <li><span>🔄</span><span class="label">Track</span></li>
+            <li><span>⚙️</span><span class="label">Settings</span></li>
+            <li><span>👤</span><span class="label">Profile</span></li>
+          </ul>
+        </nav>
+      </aside>
+      
+       
 
     <main class="dashboard">
       <h1>Dashboard</h1>
@@ -78,5 +82,6 @@
       </div>
     </main>
   </div>
+  <script src="app.js"></script>
 </body>
 </html>
