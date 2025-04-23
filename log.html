@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Log Activity</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f1f9f3;
+        color: #222;
+      }
+      
+      .container {
+        max-width: 600px;
+        margin: 3rem auto;
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 0.2rem;
+      }
+      
+      .subtitle {
+        font-size: 1rem;
+        color: #5e705e;
+      }
+      
+      .card {
+        background: #fff;
+        padding: 1.5rem;
+        margin-top: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      }
+      
+      .tabs {
+        display: flex;
+        margin: 1rem 0;
+        gap: 1rem;
+      }
+      
+      .tab {
+        flex: 1;
+        padding: 0.6rem 1rem;
+        background-color: #e5f1e5;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      
+      .tab.active {
+        background-color: #d4f0d4;
+        border: 2px solid #64b56f;
+      }
+      
+      .transport-options {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+      }
+      
+      .option {
+        background: #f9f9f9;
+        border: 2px solid transparent;
+        border-radius: 12px;
+        padding: 1rem;
+        text-align: center;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: 0.3s;
+      }
+      
+      .option span {
+        display: block;
+        font-size: 0.85rem;
+        color: #555;
+        margin-top: 0.3rem;
+      }
+      
+      .option.active {
+        border: 2px solid #4caf50;
+        background-color: #ecfcec;
+      }
+      
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+      
+      input[type="range"] {
+        width: 100%;
+        margin: 0.5rem 0;
+      }
+      
+      .range-value {
+        display: block;
+        text-align: right;
+        font-weight: bold;
+        color: #2e7d32;
+      }
+      
+      .impact-summary {
+        background: #e6f4e6;
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+      }
+      
+      .impact-summary h4 {
+        margin-top: 0;
+      }
+      
+      .impact-summary strong {
+        color: #2e7d32;
+      }
+      
+  </style>
+</head>
+
+
+<body>
+
+          
+  <div class="container">
+    <h1>Log Activity</h1>
+    <p class="subtitle">Track your daily environmental impact</p>
+
+    <div class="card">
+      <h2>Record Your Eco-Friendly Actions</h2>
+      <p>Log your daily habits to track your environmental footprint</p>
+
+      <div class="tabs">
+        <button class="tab active">Transport</button>
+        <button class="tab">Electricity</button>
+        <button class="tab">Consumption</button>
+      </div>
+
+      <h3>Mode of Transport</h3>
+      <div class="transport-options">
+        <button class="option active">🚴‍♂️ Bicycle<br/><span>0 emissions</span></button>
+        <button class="option">🚶‍♂️ Walking<br/><span>0 emissions</span></button>
+        <button class="option">🚌 Public Transit<br/><span>Low emissions</span></button>
+        <button class="option">🚗 Car<br/><span>High emissions</span></button>
+      </div>
+
+      <label for="distance">Distance (km)</label>
+      <input type="range" id="distance" name="distance" min="1" max="20" value="8" />
+      <span class="range-value">8 km</span>
+
+      <div class="impact-summary">
+        <h4>Impact Summary</h4>
+        <p>CO<sub>2</sub> Saved: <strong>1.6 kg</strong></p>
+        <p>Eco Points: <strong>8 pts</strong></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

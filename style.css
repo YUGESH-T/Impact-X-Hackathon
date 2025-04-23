@@ -10,6 +10,10 @@
     color: #222;
   }
   
+  a{
+    text-decoration: none;
+  }
+
   .container {
     display: flex;
     min-height: 100vh;
@@ -175,3 +179,5 @@
   .sidebar.expanded .label {
     display: inline;
   }
+
+
