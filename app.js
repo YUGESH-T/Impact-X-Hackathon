@@ -61,8 +61,9 @@ const data = {
     });
   }
   
-//   to import the data
+//   to import the data in the html
   document.addEventListener("DOMContentLoaded", () => {
     switchView("weekly");
   });
+
   
