@@ -7,75 +7,50 @@ toggleBtn.addEventListener('click', () => {
   sidebar.classList.toggle('expanded');
 });
 
+// Initial values
+let carbonSaved = 4.8;
+let waterSaved = 32;
+let energySaved = 1.3;
+let currentPoints = 100;
+const maxPoints = 500;
 
-const weeklyData = [
-    { rank: 1, user: "GreenGuru", ecoPoints: 1250, co2Saved: 45.2, streak: 7 },
-    { rank: 2, user: "EcoWarrior", ecoPoints: 1100, co2Saved: 38.7, streak: 5 },
-    { rank: 3, user: "PlanetSaver", ecoPoints: 950, co2Saved: 32.1, streak: 4 },
-    { rank: 4, user: "TreeHugger", ecoPoints: 800, co2Saved: 25.9, streak: 3 },
-    { rank: 5, user: "ClimateChamp", ecoPoints: 650, co2Saved: 18.4, streak: 2 }
+// DOM Elements
+const carbonEl = document.querySelectorAll(".card .value")[0];
+const waterEl = document.querySelectorAll(".card .value")[1];
+const energyEl = document.querySelectorAll(".card .value")[2];
+const pointsDisplay = document.querySelector(".streak-card p:last-of-type strong");
+const progressBar = document.querySelector(".progress");
+
+// Action impacts
+const actions = [
+  { carbon: 1.0, water: 0, energy: 0.2, points: 10 }, // Biked Today
+  { carbon: 0.5, water: 0, energy: 0.1, points: 5 },  // Recycled
+  { carbon: 0.3, water: 3, energy: 0.05, points: 3 }, // Saved Water
+  { carbon: 0.8, water: 0, energy: 0.1, points: 8 }   // Ate Vegetarian
 ];
 
-const monthlyData = [
-    { rank: 1, user: "EcoWarrior", ecoPoints: 4500, co2Saved: 152.3, streak: 28 },
-    { rank: 2, user: "GreenGuru", ecoPoints: 4200, co2Saved: 145.8, streak: 25 },
-    { rank: 3, user: "ClimateChamp", ecoPoints: 3800, co2Saved: 129.6, streak: 22 },
-    { rank: 4, user: "PlanetSaver", ecoPoints: 3500, co2Saved: 112.4, streak: 20 },
-    { rank: 5, user: "TreeHugger", ecoPoints: 3000, co2Saved: 95.7, streak: 18 }
-];
-
-function populateLeaderboard(data) {
-    const tbody = document.getElementById('leaderboard-body');
-    if (!tbody) {
-        console.error("Error: Element with ID 'leaderboard-body' not found.");
-        return;
-    }
-    tbody.innerHTML = ''; // Clear existing rows
-
-    data.forEach(entry => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${entry.rank}</td>
-            <td>${entry.user}</td>
-            <td>${entry.ecoPoints}</td>
-            <td>${entry.co2Saved.toFixed(1)}</td>
-            <td>${entry.streak}</td>
-        `;
-        tbody.appendChild(row);
-    });
+// Update progress bar based on points
+function updateProgressBar(currentPoints) {
+  const percentage = Math.min((currentPoints / maxPoints) * 100, 100);
+  progressBar.style.width = `${percentage}%`;
+  pointsDisplay.innerText = `${currentPoints} points`;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const tbody = document.getElementById('leaderboard-body');
-    const tabs = document.querySelectorAll('.tab');
+// Event listeners for Quick Add buttons
+document.querySelectorAll(".quick-add button").forEach((button, index) => {
+  button.addEventListener("click", () => {
 
-    if (!tbody) {
-        console.error("Error: Leaderboard body element not found.");
-        return;
-    }
+    carbonSaved += actions[index].carbon;
+    waterSaved += actions[index].water;
+    energySaved += actions[index].energy;
 
-    if (tabs.length === 0) {
-        console.error("Error: No tab elements found with class 'tab'.");
-        return;
-    }
+    currentPoints = Math.min(currentPoints + actions[index].points, maxPoints);
 
-    // Initial population with weekly data
-    populateLeaderboard(weeklyData);
+    // Update DOM
+    carbonEl.textContent = `${carbonSaved.toFixed(1)}kg`;
+    waterEl.textContent = `${waterSaved.toFixed(0)}L`;
+    energyEl.textContent = `${energySaved.toFixed(1)}kWh`;
 
-    // Tab switching logic
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            // Remove active class from all tabs
-            tabs.forEach(t => t.classList.remove('active'));
-            // Add active class to clicked tab
-            tab.classList.add('active');
-
-            // Update leaderboard based on tab
-            if (tab.textContent === 'Weekly') {
-                populateLeaderboard(weeklyData);
-            } else {
-                populateLeaderboard(monthlyData);
-            }
-        });
-    });
+    updateProgressBar(currentPoints);
+  });
 });
