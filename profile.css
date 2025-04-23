@@ -348,6 +348,93 @@ body {
   font-weight: 500;
 }
 
+.rewards-section {
+  background: #f7fdf8;
+  padding: 3rem 1.5rem;
+}
+
+.rewards-container {
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+}
+
+.rewards-container h2 {
+  margin-bottom: 0.2rem;
+}
+
+.rewards-container .subtitle {
+  margin-top: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.reward-card {
+  background: #fefefe;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+}
+
+.reward-card .info h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.1rem;
+}
+
+.reward-card .info p {
+  margin: 0.2rem 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+}
+
+.badge.blue {
+  background: #d4ecf7;
+  color: #1a6fa8;
+}
+
+.badge.green {
+  background: #e3f7e8;
+  color: #1d824c;
+}
+
+.redeem-btn {
+  margin-top: 1rem;
+  background-color: #d9f5de;
+  color: #1d824c;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.redeem-btn:hover {
+  background-color: #c5f0cf;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .settings-container {
