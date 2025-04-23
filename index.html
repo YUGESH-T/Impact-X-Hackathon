@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoTrack - Gamified Carbon Tracker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  <header>
+    <h1>Green Habits</h1>
+    <nav id="navbar" >
+        <a href="#home">Home</a>
+        <a href="#log">Log</a>
+        <a href="#progress">Progress</a>
+        <a href="#challenges">Challenges</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#settings">Settings</a>
+        <span class="toggle-dark">🌙</span>
+      </nav>
+  </header>
+
+  <section id="home">
+    <div class="card">
+      <h2>Today's Summary</h2>
+      <p>Carbon Saved: <strong>4.8kg</strong></p>
+      <p>Eco-Points: <strong>145</strong></p>
+      <button>+ Log Habit</button>
+    </div>
+  </section>
+
+  <section id="log">
+    <div class="card">
+      <h2>Log Activity</h2>
+      <button>🚗 Transport</button>
+      <button>💡 Electricity</button>
+      <button>🍔 Consumption</button>
+    </div>
+  </section>
+
+  <section id="progress">
+    <div class="card">
+      <h2>My Progress</h2>
+      <p>Weekly Carbon Saving</p>
+      <canvas id="progressChart" width="300" height="150"></canvas>
+    </div>
+  </section>
+
+  <section id="challenges">
+    <div class="card">
+      <h2>Challenges</h2>
+      <p>No Plastic for 3 Days</p>
+      <div class="progress-bar"><span style="width: 66%"></span></div>
+      <p>Bike to college 5 times</p>
+      <div class="progress-bar"><span style="width: 20%"></span></div>
+    </div>
+  </section>
+
+  <section id="leaderboard">
+    <div class="card">
+      <h2>Leaderboard</h2>
+      <ol>
+        <li> Yugesh – 220 pts</li>
+        <li> Usman – 200 pts</li>
+        <li> Amaan – 185 pts</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="settings">
+    <div class="card">
+      <h2>Settings</h2>
+      <label><input type="checkbox" /> Enable Dark Mode</label>
+    </div>
+  </section>
+
+
 </body>
 </html>
