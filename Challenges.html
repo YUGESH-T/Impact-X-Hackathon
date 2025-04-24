@@ -5,22 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Challenges.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="dasrk.css">
     <script src="https://kit.fontawesome.com/62301ddb39.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
 </head>
 <body>
   <section class="challenges">
-      <aside class="sidebar" id="sidebar">
-        <button id="toggleBtn"><i class="fa-brands fa-pagelines"></i></button>
-        <nav>
-          <ul>
-            <li><span><a href="index.html"><i class="fa-solid fa-house"></i></span><span class="label">Home</span></a></li>
-            <li><span><a href="log.html"><i class="fa-solid fa-chart-pie"></i></span><span class="label">Stats</span></a></li>
-            <li><span><a href="leaderboard.html"><i class="fa-solid fa-chart-column"></i></span><span class="label">Leaderboard</span></a></li>
-            <li><span><a href="profile.html"><i class="fa-solid fa-gear"></i></span><span class="label">Settings></span></a></li>
-            <li><span><a href="profile.html"><i class="fa-solid fa-user"></i></span><span class="label">Profile</span></a></li>
-          </ul>
-        </nav>
-      </aside>
+    <aside class="sidebar" id="sidebar">
+      <button id="toggleBtn"><i class="fa-brands fa-pagelines"></i></button>
+      <nav>
+        <ul>
+          <li>
+            <span><a href="index.html"><i class="fa-solid fa-house"></i></span>
+            <span class="label">Home</span></a>
+          </li>
+          <li>
+            <span><a href="log.html"><i class="fa-solid fa-chart-pie"></i></span>
+            <span class="label">Statistics</span></a>
+          </li>
+          <li>
+            <span><a href="leaderboard.html"><i class="fa-solid fa-chart-column"></i></span>
+              <span class="label">Leaderboard</span></a></li>
+          <li>
+            <span><a href="Challenges.html"><i class="fa-solid fa-list-check"></i></span>
+            <span class="label">Settings</span></a>
+          </li>
+          <li>
+            <span><a href="profile.html"><i class="fa-solid fa-user"></i></span>
+            <span class="label">Profile</span></a>
+          </li>
+          <li>
+              <button id="dark-mode" onclick="document.body.classList.toggle('dark-theme')" ><i class="fa-solid fa-moon"></i></button>
+              <span class="label">Dark-mode</span></a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
         <h2>Challenges</h2>
         <p>Complete eco-missions to earn bonus points</p>
         <div class="challenge-grid">
@@ -72,7 +93,18 @@
             <button class="join-btn">Join Challenge</button>
           </div>
         </div>
+
+        <div id="chal-ani" style="width: 45%; height: 35%; position:fixed; right:0; bottom : 10px ;"></div>
       </section>
       <script src="app.js"></script>
+     <script>
+      lottie.loadAnimation({
+        container: document.getElementById('chal-ani'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'Animation - 1745475853004.json' 
+      });
+     </script>
 </body>
 </html>

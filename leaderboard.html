@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="sidebar.css">
   <script src="https://kit.fontawesome.com/62301ddb39.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
   <link rel="stylesheet" href="dasrk.css">
   <style>
     body {
@@ -171,10 +172,10 @@
           <li>
             <span><a href="leaderboard.html"><i class="fa-solid fa-chart-column"></i></span>
               <span class="label">Leaderboard</span></a></li>
-          <li>
-            <span><a href="profile.html"><i class="fa-solid fa-gear"></i></span>
-            <span class="label">Settings</span></a>
-          </li>
+              <li>
+                <span><a href="Challenges.html"><i class="fa-solid fa-list-check"></i></span>
+                <span class="label">Challenges</span></a>
+              </li>
           <li>
             <span><a href="profile.html"><i class="fa-solid fa-user"></i></span>
             <span class="label">Profile</span></a>
@@ -213,7 +214,17 @@
         </tbody>
       </table>
     </div>
+    <div id="nature-animation" style="width: 250px; height: 300px; position:fixed;right:0; bottom : 10px ;"></div>
   </div>
+  <script>
+    lottie.loadAnimation({
+      container: document.getElementById('nature-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Animation - 1745473491144.json' 
+    });
+  </script>
   <script src="app.js"></script>
   <script src="data.js"></script>
 </body>

@@ -13,6 +13,7 @@ toggleBtn.addEventListener('click', () => {
 });
 
 
+
 let carbonSaved = 4.8;
 let waterSaved = 32;
 let energySaved = 1.3;

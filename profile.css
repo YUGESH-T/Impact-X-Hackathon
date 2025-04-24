@@ -11,7 +11,7 @@ body {
 }
 
 /* Sidebar Styles */
-/* .sidebar {
+.sidebar {
   position: fixed;
   top: 0;
   left: 0;
@@ -72,7 +72,7 @@ body {
 
 .sidebar.expanded .label {
   display: inline;
-} */
+}
 
 /* Main Section */
 .profile-settings {
