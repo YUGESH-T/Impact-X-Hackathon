@@ -11,7 +11,7 @@ body {
 }
 
 /* Sidebar Styles */
-.sidebar {
+/* .sidebar {
   position: fixed;
   top: 0;
   left: 0;
@@ -56,11 +56,15 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   gap: 10px;
   width: 100%;
 }
 
+.label{
+  color: white;
+  padding-left: 8px;  
+}
 .sidebar .label {
   display: none;
   font-size: 0.9rem;
@@ -68,7 +72,7 @@ body {
 
 .sidebar.expanded .label {
   display: inline;
-}
+} */
 
 /* Main Section */
 .profile-settings {
@@ -295,3 +299,26 @@ body {
     max-width: 100%;
   }
 }
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px; 
+}
+
+.profile h2 {
+  margin: 0;
+}
+
+#amountOfCoins{
+  padding-top: 20px;
+  padding-right: 10px;
+  font-size: larger;
+  background-color: #d9f5deb3; 
+  border-radius: 2px;
+  color:#1d824c;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+}
+

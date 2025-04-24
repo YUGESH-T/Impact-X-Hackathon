@@ -1,10 +1,15 @@
 const sidebar = document.getElementById('sidebar');
 const toggleBtn = document.getElementById('toggleBtn');
-// const logs = document.querySelector('.container-01');
-
+const import_text = toggleBtn.querySelector('i'); 
 
 toggleBtn.addEventListener('click', () => {
   sidebar.classList.toggle('expanded');
+
+  if (sidebar.classList.contains('expanded')) {
+    import_text.innerText = ' Green Habits';
+  } else {
+    import_text.innerText = ''; 
+  }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -36,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   
-    // Transport selection
+    // Transport sections units : kms
     transportOptions.forEach(option => {
       option.addEventListener('click', () => {
         transportOptions.forEach(opt => opt.classList.remove('active'));
@@ -56,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     kwhInput.addEventListener('input', () => {
       document.querySelector('.kwh-value').textContent = `${kwhInput.value} kWh`;
       updateImpact();
-    //   distanceInput.style.display ="none";
+   
     });
   
     // Consumption

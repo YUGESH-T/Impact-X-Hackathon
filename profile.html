@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="sidebar.css">
     <script src="https://kit.fontawesome.com/62301ddb39.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dasrk.css">
 </head>
 <body>
     <section class="profile-settings">
@@ -13,21 +15,52 @@
         <button id="toggleBtn"><i class="fa-brands fa-pagelines"></i></button>
         <nav>
           <ul>
-            <li><span><a href="index.html"><i class="fa-solid fa-house"></i></span><span class="label"> Home</span></a></li>
-            <li><span><a href="log.html"><i class="fa-solid fa-chart-pie"></i></span><span class="label"> Stats</span></a></li>
-            <li><span><a href="leaderboard.html"><i class="fa-solid fa-chart-column"></i></span><span class="label"> Leaderboard</span></a></li>
-            <li><span><a href="profile.html"><i class="fa-solid fa-gear"></i></span><span class="label"> Settings></span></a></li>
-            <li><span><a href="profile.html"><i class="fa-solid fa-user"></i></span><span class="label"> Profile</span></a></li>
+            <li>
+              <span><a href="index.html"><i class="fa-solid fa-house"></i></span>
+              <span class="label">Home</span></a>
+            </li>
+            <li>
+              <span><a href="log.html"><i class="fa-solid fa-chart-pie"></i></span>
+              <span class="label">Statistics</span></a>
+            </li>
+            <li>
+              <span><a href="leaderboard.html"><i class="fa-solid fa-chart-column"></i></span>
+                <span class="label">Leaderboard</span></a></li>
+            <li>
+              <span><a href="profile.html"><i class="fa-solid fa-gear"></i></span>
+              <span class="label">Settings</span></a>
+            </li>
+            <li>
+              <span><a href="profile.html"><i class="fa-solid fa-user"></i></span>
+              <span class="label">Profile</span></a>
+            </li>
+            <li>
+                <button id="dark-mode" onclick="document.body.classList.toggle('dark-theme')" ><i class="fa-solid fa-moon"></i></button>
+                <span class="label">Dark-mode</span></a>
+            </li>
           </ul>
         </nav>
       </aside>
+      <!-- <div class="profile">
+        <h2>
+          Profile & Settings
+          <div class="coins">
+            <h2 id="amountOfCoins" >612</h2>
+          </div>
+        </h2>
+      </div> -->
+      <div class="profile">
         <h2>Profile & Settings</h2>
+        <div class="coins">
+          <p id="amountOfCoins"><i class="fa-solid fa-leaf"></i>  612</p>
+        </div>
+      </div>
         <p>Manage your account and preferences</p>
       
         <div class="settings-container">
           <div class="profile-card">
-            <div class="avatar">YT</div>
-            <h3>Yugesh T</h3>
+            <div class="avatar">M</div>
+            <h3>MITS</h3>
             <p>Member since April 2025</p>
             <div class="profile-stats">
               <p><strong>285</strong> Total Eco-Points</p>

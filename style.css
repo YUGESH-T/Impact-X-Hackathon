@@ -14,7 +14,7 @@
     top: 0;
     left: 0;
     width: 72px;
-    height: 100vh;
+    height: 100dvh;
     background-color: #27ae60;
     display: flex;
     flex-direction: column;
@@ -58,7 +58,10 @@
     color: rgb(0, 0, 0);
     width: 100%;
   }
-  
+  .sidebar nav ul li #dark-theme{
+    background-color: #555;
+    border-radius: 50%;
+  }
   .sidebar nav ul li i {
     font-size: 1.2rem;
     color: rgb(0, 0, 0);
@@ -204,7 +207,14 @@
     border-radius: 8px;
     cursor: pointer;
   }
-  
+
+  .quick-add button:hover{
+      border: 2px solid rgb(0, 0, 0);
+  }
+
+  .quick-add button:active{
+   background-color: #b7dfc998;
+}
   .streak-card .progress-bar {
     height: 10px;
     background: #d0e6d6;
@@ -278,4 +288,16 @@
     display: inline;
   }
 
+
+a.active{
+  background-color: #10723e;
+  border-radius: 15px;
+}
+
+/* Dark Theme  */
+#dark-theme{
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.712);
+
+}
 

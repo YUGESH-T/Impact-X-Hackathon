@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Log Activity</title>
   <!-- <link rel="stylesheet" href="styles.css"/> -->
+  <link rel="stylesheet" href="dasrk.css">
+  <link rel="stylesheet" href="sidebar.css">
   <script src="https://kit.fontawesome.com/62301ddb39.js" crossorigin="anonymous"></script>
   <style>
     body {
@@ -59,9 +61,13 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   gap: 10px;
   width: 100%;
+}
+
+.sidebar nav ul li i {
+  color: rgb(0, 0, 0);
 }
 
 .sidebar .label {
@@ -210,11 +216,29 @@
       <button id="toggleBtn"><i class="fa-brands fa-pagelines"></i></button>
       <nav>
         <ul>
-          <li><span><a href="index.html"><i class="fa-solid fa-house"></i></span><span class="label"> Home</span></a></li>
-          <li><span><a href="log.html"><i class="fa-solid fa-chart-pie"></i></span><span class="label"> Stats</span></a></li>
-          <li><span><a href="leaderboard.html"><i class="fa-solid fa-chart-column"></i></span><span class="label"> Leaderboard</span></a></li>
-          <li><span><a href="profile.html"><i class="fa-solid fa-gear"></i></span><span class="label"> Settings></span></a></li>
-          <li><span><a href="profile.html"><i class="fa-solid fa-user"></i></span><span class="label"> Profile</span></a></li>
+          <li>
+            <span><a href="index.html"><i class="fa-solid fa-house"></i></span>
+            <span class="label">Home</span></a>
+          </li>
+          <li>
+            <span><a href="log.html"><i class="fa-solid fa-chart-pie"></i></span>
+            <span class="label">Statistics</span></a>
+          </li>
+          <li>
+            <span><a href="leaderboard.html"><i class="fa-solid fa-chart-column"></i></span>
+              <span class="label">Leaderboard</span></a></li>
+          <li>
+            <span><a href="profile.html"><i class="fa-solid fa-gear"></i></span>
+            <span class="label">Settings</span></a>
+          </li>
+          <li>
+            <span><a href="profile.html"><i class="fa-solid fa-user"></i></span>
+            <span class="label">Profile</span></a>
+          </li>
+          <li>
+              <button id="dark-mode" onclick="document.body.classList.toggle('dark-theme')" ><i class="fa-solid fa-moon"></i></button>
+              <span class="label">Dark-mode</span></a>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -231,17 +255,47 @@
         <button class="tab">Consumption</button>
       </div>
 
+      <!-- TRANSPORT SECTION -->
+<div class="section transport-section">
+  <h3>Mode of Transport</h3>
+  <div class="transport-options">
+    <button class="option active">🚴‍♂ Bicycle<br/><span>0 emissions</span></button>
+    <button class="option">🚶‍♂ Walking<br/><span>0 emissions</span></button>
+    <button class="option">🚌 Public Transit<br/><span>Low emissions</span></button>
+    <button class="option">🚗 Car<br/><span>High emissions</span></button>
+  </div>
+  <label for="distance">Distance (km)</label>
+  <input type="range" id="distance" name="distance" min="1" max="20" value="8" />
+  <span class="range-value">8 km</span>
+</div>
+
+<!-- ELECTRICITY SECTION -->
+<div class="section electricity-section" style="display:none">
+  <label for="kwh">Electricity Used (kWh)</label>
+  <input type="range" id="kwh" name="kwh" min="1" max="50" value="10" />
+  <span class="range-value kwh-value">10 kWh</span>
+</div>
+
+<!-- CONSUMPTION SECTION -->
+<div class="section consumption-section" style="display:none">
+  <p>Select eco-friendly actions you took today:</p>
+  <label><input type="checkbox" class="consumption" value="recycled" /> ♻ Recycled items</label><br/>
+  <label><input type="checkbox" class="consumption" value="plastic" /> 🚫 Avoided plastic</label><br/>
+  <label><input type="checkbox" class="consumption" value="local" /> 🥕 Bought local food</label>
+</div>
+
+<!-- 
       <h3>Mode of Transport</h3>
       <div class="transport-options">
         <button class="option active">🚴‍♂ Bicycle<br/><span>0 emissions</span></button>
         <button class="option">🚶‍♂ Walking<br/><span>0 emissions</span></button>
         <button class="option">🚌 Public Transit<br/><span>Low emissions</span></button>
         <button class="option">🚗 Car<br/><span>High emissions</span></button>
-      </div>
+      </div> -->
 
-      <label for="distance">Distance (km)</label>
+      <!-- <label for="distance">Distance (km)</label>
       <input type="range" id="distance" name="distance" min="1" max="20" value="8" />
-      <span class="range-value">8 km</span>
+      <span class="range-value">8 km</span> -->
 
       <div class="impact-summary">
         <h4>Impact Summary</h4>
@@ -251,6 +305,7 @@
       </div>
     </div>
   </div>
-  <script src="app.js"></script>
+  <script src="lodge.js"></script>
+  <!-- <script src="app.js"></script> -->
 </body>
 </html>

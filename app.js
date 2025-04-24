@@ -1,10 +1,15 @@
 const sidebar = document.getElementById('sidebar');
 const toggleBtn = document.getElementById('toggleBtn');
-// const logs = document.querySelector('.container-01');
-
+const import_text = toggleBtn.querySelector('i'); 
 
 toggleBtn.addEventListener('click', () => {
   sidebar.classList.toggle('expanded');
+
+  if (sidebar.classList.contains('expanded')) {
+    import_text.innerText = ' Green Habits';
+  } else {
+    import_text.innerText = ''; 
+  }
 });
 
 
@@ -32,9 +37,10 @@ const actions = [
 
 function updateProgressBar(currentPoints) {
   const percentage = Math.min((currentPoints / maxPoints) * 100, 100);
-  progressBar.style.width = `${percentage}%`;
-  pointsDisplay.innerText = `${currentPoints} points`;
+  progressBar.style.width = `${percentage}%`; 
+  pointsDisplay.innerText = `${currentPoints}  points`;
 }
+
 
 document.querySelectorAll(".quick-add button").forEach((button, index) => {
   button.addEventListener("click", () => {

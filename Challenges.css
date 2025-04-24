@@ -194,7 +194,7 @@ body {
   color: white;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .challenge-card {
     width: 100%;
