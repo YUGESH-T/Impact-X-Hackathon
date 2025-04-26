@@ -237,6 +237,11 @@ body {
   position: relative;
 }
 
+.reward-card:hover{
+  background-color: #1ca65c58;
+  border: 1px solid rgba(0, 0, 0, 0.627);
+
+}
 .reward-card .info h3 {
   margin: 0 0 0.3rem;
   font-size: 1.1rem;

@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Log Activity</title>
-  <!-- <link rel="stylesheet" href="styles.css"/> -->
-  <link rel="stylesheet" href="dasrk.css">
-  <!-- <link rel="stylesheet" href="sidebar.css"> -->
+  <link rel="stylesheet" href="/Impact-X-Hackathon/CSS/dasrk.css">
+  <link rel="stylesheet" href="/Impact-X-Hackathon/CSS/sidebar.css">
   <script src="https://kit.fontawesome.com/62301ddb39.js" crossorigin="anonymous"></script>
   <style>
     body {
@@ -15,13 +14,17 @@
         background-color: #f1f9f3;
         color: #222;
       }
+
+      aside{
+        background-color: #27ae60;
+        height: 100vh;
+      }
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 72px;
-  height: 100vh;
-  background-color: #27ae60;
+  width: 60px;
+  height: 100vh !important;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,6 +51,11 @@
   padding: 0;
   margin: 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding-left: 1rem
 }
 
 .sidebar nav ul li {
@@ -81,7 +89,7 @@
 
       .container {
         max-width: 600px;
-        margin: 3rem auto;
+        margin: 0 auto;
         padding: 1rem;
       }
 
@@ -202,6 +210,12 @@
         color: white;align-self: center;
       }
       
+      .dark-theme{
+        filter: invert(1) hue-rotate(180deg);
+        background-color: #121212 !important;
+    }
+    
+      
   </style>
 </head>
 
@@ -265,7 +279,7 @@
     <button class="option">🚗 Car<br/><span>High emissions</span></button>
   </div>
   <label for="distance">Distance (km)</label>
-  <input type="range" id="distance" name="distance" min="1" max="20" value="8" />
+  <input type="range" id="distance" name="distance" min="1" max="50" value="8" />
   <span class="range-value">8 km</span>
 </div>
 
@@ -305,7 +319,7 @@
       </div>
     </div>
   </div>
-  <script src="lodge.js"></script>
+  <script src="/Impact-X-Hackathon/JavaScript/lodge.js"></script>
   <!-- <script src="app.js"></script> -->
 </body>
 </html>

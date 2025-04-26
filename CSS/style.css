@@ -305,3 +305,10 @@ a.active{
 
 }
 
+.fa-solid fa-user{
+  background: none;
+  color: black;
+  border: none;
+  border-radius: 25px;
+  
+}
