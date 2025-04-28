@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'Bicycle': { emission: 0, pointsPerKm: 1 },
     'Walking': { emission: 0, pointsPerKm: 1 },
     'Public Transit': { emission: 0.05, pointsPerKm: 0.5 }, // average fuel ka emission
-    'Car': { emission: 0.2, pointsPerKm: 0.2 },
+    'Car': { emission: 0.2, pointsPerKm: 0.1 },
   };
 
   tabs.forEach((tab, index) => {

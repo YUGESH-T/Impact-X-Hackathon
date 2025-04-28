@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Eco Action Dashboard</title>
-<link rel="stylesheet" href="/Impact-X-Hackathon/CSS/style.css" />
-<link rel="stylesheet" href="/Impact-X-Hackathon/CSS/dasrk.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
 
-<script src="https://kit.fontawesome.com/62301ddb39.js" crossorigin="anonymous"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eco Action Dashboard</title>
+  <link rel="stylesheet" href="/Impact-X-Hackathon/CSS/style.css" />
+  <link rel="stylesheet" href="/Impact-X-Hackathon/CSS/dasrk.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
+  <script src="https://kit.fontawesome.com/62301ddb39.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-<div class="container">
-  <aside class="sidebar" id="sidebar">
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
       <button id="toggleBtn"><i class="fa-brands fa-pagelines"></i></button>
       <nav>
         <ul>
@@ -26,7 +28,8 @@
           </li>
           <li>
             <span><a href="leaderboard.html"><i class="fa-solid fa-chart-column"></i></span>
-              <span class="label">Leaderboard</span></a></li>
+            <span class="label">Leaderboard</span></a>
+          </li>
           <li>
             <span><a href="Challenges.html"><i class="fa-solid fa-list-check"></i></span>
             <span class="label">Challenges</span></a>
@@ -35,100 +38,124 @@
             <span><a href="profile.html"><i class="fa-solid fa-user"></i></span>
             <span class="label">Profile</span></a>
           </li>
-          <li>
-              <button id="dark-mode" onclick="document.body.classList.toggle('dark-theme')"  style="background-color: green !important;"><i class="fa-solid fa-moon" style="background-color: green !important; background:none;"></i></button>
-              <span class="label">Dark-mode</span></a>
+          <li style="padding: 6px;">
+            <button id="dark-mode" onclick="
+              document.body.classList.toggle('dark-theme'); 
+              const moon = this.querySelector('i');
+              if (moon.style.left === '0px') {
+                moon.style.left = 'auto';
+                moon.style.right = '0px';
+              } else {
+                moon.style.left = '0px';
+                moon.style.right = 'auto';
+              }
+              " 
+              style="background-color: white; border: none; color: black; font-size: 1.5rem; padding: 0.6rem; border-radius: 25px; cursor: pointer; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; width: 38px;height: 30px; transition: background-color 0.3s ease;">
+              
+              <i class="fa-solid fa-moon" 
+                style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 1.5rem; background: none; cursor: pointer; transition: all 0.5s ease;">
+              </i>
+            </button>
+            <span class="label">Dark-mode</span>
           </li>
+          
+          
+          
+          
+          
+
+
         </ul>
       </nav>
     </aside>
-    
-      
 
-  <main class="dashboard">
-    <h1>Dashboard</h1>
-    <p class="subheading">Your daily eco-impact at a glance</p>
 
-    <div class="metrics">
-      <div class="card">
-        <h2>Carbon Saved Today</h2>
-        <p class="value">4.8kg</p>
-        <p class="note">15% better than yesterday</p>
-      </div>
-      <div class="card">
-        <h2>Water Saved</h2>
-        <p class="value">32L</p>
-        <p class="note">From efficient usage</p>
-      </div>
-      <div class="card">
-        <h2>Energy Conserved</h2>
-        <p class="value">1.3kWh</p>
-        <p class="note">Equivalent to 1kg CO₂</p>
-      </div>
-      <div class="card">
-        <h2>Eco-Rank</h2>
-        <p class="value">#42</p>
-        <p class="note">Top 15% of users</p>
-      </div>
-    </div>
 
-    <div class="quick-stats">
-      <div class="quick-add">
-        <h3>Quick Add</h3>
-        <div class="buttons">
-          <button><i class="fa-solid fa-person-biking"></i> Biked Today (+10 pts)</button>
-          <button><i class="fa-solid fa-recycle"></i> Recycled (+5 pts)</button>
-          <button><i class="fa-solid fa-droplet"></i> Saved Water (+3 pts)</button>
-          <button><i class="fa-solid fa-carrot"></i> Ate Vegetarian (+8 pts)</button>
+    <main class="dashboard">
+      <h1>Dashboard</h1>
+      <p class="subheading">Your daily eco-impact at a glance</p>
+
+      <div class="metrics">
+        <div class="card">
+          <h2>Carbon Saved Today</h2>
+          <p class="value">4.8kg</p>
+          <p class="note">15% better than yesterday</p>
+        </div>
+        <div class="card">
+          <h2>Water Saved</h2>
+          <p class="value">32L</p>
+          <p class="note">From efficient usage</p>
+        </div>
+        <div class="card">
+          <h2>Energy Conserved</h2>
+          <p class="value">1.3kWh</p>
+          <p class="note">Equivalent to 1kg CO₂</p>
+        </div>
+        <div class="card">
+          <h2>Eco-Rank</h2>
+          <p class="value">#42</p>
+          <p class="note">Top 15% of users</p>
         </div>
       </div>
 
-      <div class="streak-card">
-        <h3>Your Streak</h3>
-        <p><strong>7 days</strong> Current streak</p>
-        <div class="progress-bar">
-          <div class="progress" style="width: 20%;"></div>
+      <div class="quick-stats">
+        <div class="quick-add">
+          <h3>Quick Add</h3>
+          <div class="buttons">
+            <button><i class="fa-solid fa-person-biking"></i> Biked Today (+10 pts)</button>
+            <button><i class="fa-solid fa-recycle"></i> Recycled (+5 pts)</button>
+            <button><i class="fa-solid fa-droplet"></i> Saved Water (+3 pts)</button>
+            <button><i class="fa-solid fa-carrot"></i> Ate Vegetarian (+8 pts)</button>
+          </div>
         </div>
-        <p>Weekly goal</p>
-        <p class="note">14 days Best streak</p>
-        <p><strong>100 points</strong></p>
+
+        <div class="streak-card">
+          <h3>Your Streak</h3>
+          <p><strong>7 days</strong> Current streak</p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 20%;"></div>
+          </div>
+          <p>Weekly goal</p>
+          <p class="note">14 days Best streak</p>
+          <p><strong>100 points</strong></p>
+        </div>
       </div>
-    </div>
 
-    <div class="eco-tip">
-      <h4>Daily Eco-Tip</h4>
-      <blockquote>
-        "Unplugging unused electronics can save up to 10% of your energy usage." — Energy Star
-      </blockquote>
-      
-      <div id="tree-anim" style="width: 250px; height: 200px; position:fixed;right:0; top : 10px ;"></div>
+      <div class="eco-tip">
+        <h4>Daily Eco-Tip</h4>
+        <blockquote>
+          "Unplugging unused electronics can save up to 10% of your energy usage." — Energy Star
+        </blockquote>
+
+        <div id="tree-anim" style="width: 250px; height: 200px; position:fixed;right:0; top : 10px ;"></div>
 
 
-  
-    </div>
-  </main>
-</div>
-<script src="/Impact-X-Hackathon/JavaScript/app.js"></script>
-<script>
-lottie.loadAnimation({
-  container: document.getElementById('nature-animation'),
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  path: 'Impact-X-Hackathon\Animation - 1745473491144.json' 
-});
 
-const animate = lottie.loadAnimation({
-  container: document.getElementById('tree-anim'),
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  path : 'Animation - 1745474260695.json'
-});
+      </div>
+    </main>
+  </div>
+  <script src="/Impact-X-Hackathon/JavaScript/app.js"></script>
+  <script>
+    lottie.loadAnimation({
+      container: document.getElementById('nature-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Impact-X-Hackathon\Animation - 1745473491144.json'
+    });
 
-animate.setSpeed(0.4);
-</script>
+    const animate = lottie.loadAnimation({
+      container: document.getElementById('tree-anim'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Animation - 1745474260695.json'
+    });
+
+    animate.setSpeed(0.4);
+  </script>
 
 
 </body>
+
 </html>

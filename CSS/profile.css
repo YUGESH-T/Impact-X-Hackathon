@@ -10,12 +10,12 @@ body {
   color: #222;
 }
 
-/* Sidebar Styles */
+/* Sidebar part */
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 72px;
+  width: 60px;
   height: 100vh;
   background-color: #27ae60;
   display: flex;
@@ -325,5 +325,6 @@ body {
   color:#1d824c;
   padding: 0.3rem 0.7rem;
   border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.19)
 }
 

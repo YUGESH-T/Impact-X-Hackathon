@@ -68,3 +68,4 @@ if (document.readyState === 'loading') {
 } else {
     initializeLeaderboard();
 }
+
