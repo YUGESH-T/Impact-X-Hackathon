@@ -36,18 +36,24 @@ body {
 }
 
 .sidebar button#toggleBtn {
+  padding: 10px;
   background: none;
   border: none;
-  color: black;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 8px;
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 .sidebar nav ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding-left: 1rem;
   width: 100%;
-  padding: 0;
   margin: 0;
 }
 
@@ -257,6 +263,17 @@ table.leaderboard tbody tr:nth-child(odd) {
     right: 0;
     bottom: 0;
   }
+
+  li:hover{
+    background-color: #27ae60;
+     border: none;
+      color: black; 
+      font-size: 1.5rem; 
+      padding: 0.6rem; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      width: 80% !important;
+  }
 }
 
   </style>
@@ -286,9 +303,25 @@ table.leaderboard tbody tr:nth-child(odd) {
             <span><a href="profile.html"><i class="fa-solid fa-user"></i></span>
             <span class="label">Profile</span></a>
           </li>
-          <li>
-              <button id="dark-mode" onclick="document.body.classList.toggle('dark-theme')" ><i class="fa-solid fa-moon"></i></button>
-              <span class="label">Dark-mode</span></a>
+          <li style="padding: 0;">
+            <button id="dark-mode" onclick="
+              document.body.classList.toggle('dark-theme'); 
+              const moon = this.querySelector('i');
+              if (moon.style.left === '0px') {
+                moon.style.left = 'auto';
+                moon.style.right = '0px';
+              } else {
+                moon.style.left = '0px';
+                moon.style.right = 'auto';
+              }
+              " 
+              style="background-color: white; border: none; color: black; font-size: 1rem; padding: 0.6rem; border-radius: 25px; cursor: pointer; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; width: 48px;height: 30px; transition: background-color 0.3s ease;">
+              
+              <i class="fa-solid fa-moon" 
+                style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 1.2rem; background: none; cursor: pointer; transition: all 0.5s ease;padding-left: 10px;padding-right: 10px">
+              </i>
+            </button>
+            <span class="label">Dark-mode</span>
           </li>
         </ul>
       </nav>

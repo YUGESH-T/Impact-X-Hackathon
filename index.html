@@ -15,7 +15,7 @@
 <body>
   <div class="container">
     <aside class="sidebar" id="sidebar">
-      <button id="toggleBtn"><i class="fa-brands fa-pagelines"></i></button>
+      <button id="toggleBtn"><i class="fa-brands fa-pagelines" ></i></button>
       <nav>
         <ul>
           <li>
@@ -38,7 +38,7 @@
             <span><a href="profile.html"><i class="fa-solid fa-user"></i></span>
             <span class="label">Profile</span></a>
           </li>
-          <li style="padding: 6px;">
+          <li style="padding: 0;">
             <button id="dark-mode" onclick="
               document.body.classList.toggle('dark-theme'); 
               const moon = this.querySelector('i');
@@ -50,10 +50,10 @@
                 moon.style.right = 'auto';
               }
               " 
-              style="background-color: white; border: none; color: black; font-size: 1.5rem; padding: 0.6rem; border-radius: 25px; cursor: pointer; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; width: 38px;height: 30px; transition: background-color 0.3s ease;">
+              style="background-color: white; border: none; color: black; font-size: 1rem; padding: 0.6rem; border-radius: 25px; cursor: pointer; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; width: 48px;height: 30px; transition: background-color 0.3s ease;">
               
               <i class="fa-solid fa-moon" 
-                style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 1.5rem; background: none; cursor: pointer; transition: all 0.5s ease;">
+                style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 1.2rem; background: none; cursor: pointer; transition: all 0.5s ease;padding-left: 10px;padding-right: 10px">
               </i>
             </button>
             <span class="label">Dark-mode</span>

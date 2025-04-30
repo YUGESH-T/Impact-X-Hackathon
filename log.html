@@ -21,7 +21,7 @@
       }
 .sidebar {
   position: fixed;
-  top: 0;
+  top: 0 !important;
   left: 0;
   width: 60px;
   height: 100vh !important;
@@ -29,7 +29,6 @@
   flex-direction: column;
   align-items: center;
   padding-top: 1rem;
-  padding-right: 1rem;
   transition: width 0.3s ease;
   z-index: 1000;
 }
@@ -39,12 +38,14 @@
 }
 
 .sidebar button#toggleBtn {
+  padding: 10px;
   background: none;
   border: none;
-  color: black;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 8px;
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 .sidebar nav ul {
@@ -289,6 +290,16 @@
   }
 }
 
+li:hover{
+  background-color: #27ae60;
+   border: none;
+    color: black; 
+    font-size: 1.5rem; 
+    padding: 0.6rem; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    width: 80% !important;
+}
       
   </style>
 </head>
@@ -322,11 +333,26 @@
           <li>
             <span><a href="profile.html"><i class="fa-solid fa-user"></i></span>
             <span class="label">Profile</span></a>
-          </li>
-          <li>
-              <button id="dark-mode" onclick="document.body.classList.toggle('dark-theme')"  ><i class="fa-solid fa-moon"></i></button>
-              <span class="label">Dark-mode</span></a>
-          </li>
+            <li style="padding: 0;">
+              <button id="dark-mode" onclick="
+                document.body.classList.toggle('dark-theme'); 
+                const moon = this.querySelector('i');
+                if (moon.style.left === '0px') {
+                  moon.style.left = 'auto';
+                  moon.style.right = '0px';
+                } else {
+                  moon.style.left = '0px';
+                  moon.style.right = 'auto';
+                }
+                " 
+                style="background-color: white; border: none; color: black; font-size: 1rem; padding: 0.6rem; border-radius: 25px; cursor: pointer; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; width: 48px;height: 30px; transition: background-color 0.3s ease;">
+                
+                <i class="fa-solid fa-moon" 
+                  style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 1.2rem; background: none; cursor: pointer; transition: all 0.5s ease;padding-left: 10px;padding-right: 10px">
+                </i>
+              </button>
+              <span class="label">Dark-mode</span>
+            </li>
         </ul>
       </nav>
     </aside>
@@ -349,7 +375,7 @@
   <div class="transport-options">
     <button class="option active">🚴‍♂ Bicycle<br/><span>0 emissions</span></button>
     <button class="option">🚶‍♂ Walking<br/><span>0 emissions</span></button>
-    <button class="option">🚌 Public Transit<br/><span>Low emissions</span></button>
+    <button class="option">🚌 Public-Transport<br/><span>Low emissions</span></button>
     <button class="option">🚗 Car<br/><span>High emissions</span></button>
   </div>
   <label for="distance">Distance (km)</label>
@@ -377,7 +403,7 @@
       <div class="transport-options">
         <button class="option active">🚴‍♂ Bicycle<br/><span>0 emissions</span></button>
         <button class="option">🚶‍♂ Walking<br/><span>0 emissions</span></button>
-        <button class="option">🚌 Public Transit<br/><span>Low emissions</span></button>
+        <button class="option">🚌 Public-Transport<br/><span>Low emissions</span></button>
         <button class="option">🚗 Car<br/><span>High emissions</span></button>
       </div> -->
 
@@ -387,7 +413,7 @@
 
       <div class="impact-summary">
         <h4>Impact Summary</h4>
-        <p>CO<sub>2</sub> Saved: <strong>1.6 kg</strong></p>
+        <p id="cause">CO<sub>2</sub> Saved: <strong>1.6 kg</strong></p>
         <p>Eco Points: <strong>8 pts</strong></p>
         <button id="lodge">Submit</button>
       </div>

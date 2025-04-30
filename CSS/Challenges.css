@@ -206,3 +206,16 @@ body {
     padding: 1rem;
   }
 }
+
+
+li:hover{
+  background-color: #27ae60;
+   border: none;
+    color: black; 
+    font-size: 1.5rem; 
+    padding: 0.6rem; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    width: 80% !important;
+}
+

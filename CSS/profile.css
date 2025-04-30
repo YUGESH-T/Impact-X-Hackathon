@@ -16,6 +16,7 @@ body {
   top: 0;
   left: 0;
   width: 60px;
+  max-width: 60px;
   height: 100vh;
   background-color: #27ae60;
   display: flex;
@@ -49,6 +50,7 @@ body {
 .sidebar nav ul li {
   display: flex;
   align-items: center;
+  gap: 10px;
   padding: 0.8rem 1rem;
 }
 
@@ -61,10 +63,11 @@ body {
   width: 100%;
 }
 
-.label{
+.label {
   color: white;
-  padding-left: 8px;  
+  padding-left: 8px;
 }
+
 .sidebar .label {
   display: none;
   font-size: 0.9rem;
@@ -81,7 +84,7 @@ body {
   min-height: 100vh;
 }
 
-.sidebar.expanded + .profile-settings {
+.sidebar.expanded+.profile-settings {
   margin-left: 200px;
 }
 
@@ -209,7 +212,7 @@ body {
   background: #fff;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
 }
 
 .rewards-container h2 {
@@ -237,11 +240,12 @@ body {
   position: relative;
 }
 
-.reward-card:hover{
+.reward-card:hover {
   background-color: #1ca65c58;
   border: 1px solid rgba(0, 0, 0, 0.627);
 
 }
+
 .reward-card .info h3 {
   margin: 0 0 0.3rem;
   font-size: 1.1rem;
@@ -304,27 +308,40 @@ body {
     max-width: 100%;
   }
 }
+
 .profile {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .profile h2 {
   margin: 0;
 }
 
-#amountOfCoins{
+#amountOfCoins {
   padding-top: 20px;
   padding-right: 10px;
   font-size: larger;
-  background-color: #d9f5deb3; 
+  background-color: #d9f5deb3;
   border-radius: 2px;
-  color:#1d824c;
+  color: #1d824c;
   padding: 0.3rem 0.7rem;
   border-radius: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.19)
+}
+
+
+li:hover{
+  background-color: #27ae60;
+   border: none;
+    color: black; 
+    font-size: 1.5rem; 
+    padding: 0.6rem; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    width: 80% !important;
 }
 
