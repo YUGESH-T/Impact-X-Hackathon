@@ -17,7 +17,7 @@ Green Habits is a gamified web app that empowers users to build sustainable rout
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Google Sheets (used as lightweight database)
 - **Libraries**: Chart.js (for visualizations)
-- **Hosting**: GitHub Pages / Netlify (optional)
+- **Hosting**: GitHub Pages and Vercel
 
 ## 🚀 How It Works
 
@@ -49,11 +49,5 @@ Green Habits is a gamified web app that empowers users to build sustainable rout
 - **Amaan** – UI / UX - Figma   
 - **TejaSree** – Presenting and Research  
 
-
-## 📜 License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
----
 
 💚 *Build better habits, for yourself and the planet.*
