@@ -45,7 +45,10 @@ Green Habits is a gamified web app that empowers users to build sustainable rout
 ## 👥 Credits
 
 - **Usman** – Developer & Designer  
-- *(Add teammates if any)*
+- **Yugesh** – Developer & Designer  
+- **Amaan** – UI / UX - Figma   
+- **TejaSree** – Presenting and Research  
+
 
 ## 📜 License
 
